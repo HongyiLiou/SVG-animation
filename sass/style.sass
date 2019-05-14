@@ -1,0 +1,47 @@
+@mixin size($w,$h)
+	width: $w
+	height: $h
+*
+	font-family: 'Roboto', sans-serif, '微軟正黑體'
+	box-sizing: border-box
+body
+	padding: 0
+	margin: 0
+	background-color: #1469FF
+	// min-width: 1024px
+	+size(100%,100%)
+	&::-webkit-scrollbar
+		display: none
+.textArea
+	width: 650px
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+	text-align: center
+	animation: text 1.5s 5s
+	animation-fill-mode: forwards
+	user-select: none
+	text-shadow: 0 0 15px #FFF
+h1,p
+	color: #FFF
+h1
+	font-size: 64px
+	line-height: 0
+p
+	font-size: 24px
+	line-height: 20px
+
+svg
+	+size(100%, 100%)
+	min-width: 1024px
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+
+@keyframes text
+	0%
+		opacity: 1
+	100%
+		opacity: 0
